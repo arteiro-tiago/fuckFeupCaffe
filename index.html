@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEUP</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('FEUP.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('content').innerHTML = data;
+                })
+                .catch(error => console.log('Erro ao carregar a página:', error));
+        });
+    </script>
+</head>
+<body>
+    <div id="content"></div>
+</body>
+</html>
